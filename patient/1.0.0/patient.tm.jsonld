@@ -1,17 +1,28 @@
 {
-    "@context": ["https://www.w3.org/2022/wot/td/v1.1", { "tm": "https://www.w3.org/2022/wot/tm#" }],
-    "@type": "tm:ThingModel",
-    "title": "Patient Thing Model",
-    "description": "Model describing patient vital signs",
-    "tm:version": "1.0.0",
-    "tm:properties": {
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    { "tm": "https://www.w3.org/2022/wot/tm#" }
+  ],
+  "@type": "tm:ThingModel",
+  "title": "Patient Thing Model",
+  "description": "Model describing patient's vital signs",
+  "tm:version": "1.0.0",
+  "tm:features": {
+    "vitals": {
+      "properties": {
         "bpm": {
-            "description": "current heart rate",
-            "type": "number"
+          "type": "number",
+          "description": "Current heart rate (beats per minute)"
         },
-        "oximetry":{
-            "description": "Current blood oxygen saturation",
-            "type": "number"
+        "oximetry": {
+          "type": "number",
+          "description": "Current blood oxygen saturation (%)"
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Current body temperature (°C)"
         }
+      }
     }
+  }
 }
